@@ -1,0 +1,17 @@
+{
+  "name": "dion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss:compile": "node-sass --output-style compressed scss/main.scss css/style.css",
+    "autoprefixer": "postcss -u autoprefixer -r css/style.css"
+  },
+  "author": "Marah",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.0"
+  }
+}

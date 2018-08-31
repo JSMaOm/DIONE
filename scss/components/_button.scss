@@ -1,0 +1,12 @@
+.btn {
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 14px;
+  font-weight: 600;
+
+  &_primary {
+    color: #fff;
+    background-color: $btn-color-1;
+  }
+}
