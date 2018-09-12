@@ -1,6 +1,6 @@
-# [DION](https://symu.co/freebies/templates-4/dione-dashboard-psd-template/)
+# [DIONE](https://symu.co/freebies/templates-4/dione-dashboard-psd-template/)
 
- This project made to transform **DION** dashboard design to real code
+ This project made to transform **DIONE** dashboard design to real code
 
 ![Image of DION dashboard](imgs/Dione_dashboard.jpg)
 ### Tools used to implement it:

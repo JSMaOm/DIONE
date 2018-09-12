@@ -1,5 +1,5 @@
 .container {
-  max-width: 1130px;
+  max-width: 1280px;
   margin: 25px auto 30px;
   background-color: $t-color-1;
   border-radius: 10px;
@@ -23,6 +23,8 @@
   background-color: $p-colo-1;
   @include centerFlex;
 }
+
+
 
 .top-nav {
   width: 100%;
@@ -197,12 +199,81 @@
 
 .content {
   background-color: #fff;
-  width: 100%;
+  width: 105%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-top: 40px;
+
+  &__title {
+    margin-right: auto;
+    margin-left: 20px;
+    &_big {
+      color: $p-colo-2;
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+    &_small {
+      color: $text-color;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+
+  &__control-btn {
+    width: 235px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border: 1px solid #d2dae85e;
+    font-size: 14px;
+
+    span:first-child {
+      color: $text-color;
+    }
+    span:nth-child(2) {
+      margin-right: auto;
+    }
+  }
+
+  &__statistics {
+    margin-top: 60px;
+    width: 100%;
+    height: 600px;
+    background: url('../imgs/statistics-curve.svg') no-repeat,
+                url('../imgs/statistics-curve-1.svg') no-repeat,
+                linear-gradient(to left, #d2dae833 1px, transparent 1px),
+                linear-gradient(to bottom, #d2dae833 1px, transparent 1px);
+    background-size: 140%, 140%, 200px 80px, 200px 80px;
+    background-position: bottom, -175px 20px, top left, top left;
+  }
+
+  &__statistics-numbers {
+    margin-left: 20px;
+  }
+
+  &__statistics-number {
+    line-height: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: 80px;
+  }
+  
+}
+
+.control-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .aside {
   background-color: $bg-color-3;
-  width: 35%;
+  width: 30%;
   padding-top: 50px;
   padding-bottom: 30px;
 
