@@ -127,7 +127,7 @@
 
 .side-nav {
   background-color: $p-colo-2;
-  width: 27%;
+  width: 26%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -199,16 +199,23 @@
 
 .content {
   background-color: #fff;
-  width: 105%;
+  width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-direction: column;
   padding-top: 40px;
+
+  &__header {
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
 
   &__title {
     margin-right: auto;
-    margin-left: 20px;
     &_big {
       color: $p-colo-2;
       font-size: 36px;
@@ -223,13 +230,12 @@
   }
 
   &__control-btn {
-    width: 235px;
+    margin-right: 20px;
     display: flex;
     align-items: center;
     padding: 10px 20px;
     margin-top: 10px;
-    margin-right: 20px;
-    border: 1px solid #d2dae85e;
+    border: 1px solid #edf3ff;
     font-size: 14px;
 
     span:first-child {
@@ -244,16 +250,17 @@
     margin-top: 60px;
     width: 100%;
     height: 600px;
+    margin-bottom: -150px;
     background: url('../imgs/statistics-curve.svg') no-repeat,
                 url('../imgs/statistics-curve-1.svg') no-repeat,
-                linear-gradient(to left, #d2dae833 1px, transparent 1px),
-                linear-gradient(to bottom, #d2dae833 1px, transparent 1px);
+                linear-gradient(to left, #edf3ff 1px, transparent 1px),
+                linear-gradient(to bottom, #edf3ff 1px, transparent 1px);
     background-size: 140%, 140%, 200px 80px, 200px 80px;
     background-position: bottom, -175px 20px, top left, top left;
   }
 
   &__statistics-numbers {
-    margin-left: 20px;
+    padding-left: 20px;
   }
 
   &__statistics-number {
@@ -263,12 +270,86 @@
     color: $text-color;
     margin-bottom: 80px;
   }
+
+  &__wedgs {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   
 }
 
 .control-icon {
   width: 20px;
   height: 20px;
+}
+
+.wedgs {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    width: 23%;
+    padding: 20px 40px;
+    border: 1px solid #edf3ff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      .wedgs__icon_small {
+        .icon {
+          fill: $s-color-1;
+        }
+      }
+      .wedgs__number {
+        color: $s-color-1;
+      }
+    }
+    &:nth-child(2) {
+      .wedgs__icon_small {
+        .icon {
+          fill: $t-color-1;
+        }
+      }
+      .wedgs__number {
+        color: $t-color-1;
+      }
+    }
+
+    &:nth-child(3) {
+      .wedgs__number {
+        color: $text-color;
+      }
+    }
+  }
+  
+  &__icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+
+    &_small {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-color;
+    margin-bottom: 10px;
+  }
+
+  &__number {
+    font-size: 24px;
+    font-weight: 600;
+  }
 }
 
 .aside {
